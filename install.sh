@@ -22,10 +22,14 @@ echo "We will set your credentials now."
 
 echo "Name: AZURE_STORAGE_ACCOUNT="
 read AZURE_STORAGE_ACCOUNT
-echo "AZURE_STORAGE_ACCOUNT="$AZURE_STORAGE_ACCOUNT >> /etc/default/azurefile-dockervolumedriver
 echo "Pass: AZURE_STORAGE_ACCOUNT_KEY="
 read AZURE_STORAGE_ACCOUNT_KEY
-echo "AZURE_STORAGE_ACCOUNT_KEY="$AZURE_STORAGE_ACCOUNT_KEY >> /etc/default/azurefile-dockervolumedriver
+cat <<EOT >> /etc/default/azurefile-dockervolumedriver
+"AZURE_STORAGE_ACCOUNT="$AZURE_STORAGE_ACCOUNT
+"AZURE_STORAGE_ACCOUNT_KEY="$AZURE_STORAGE_ACCOUNT_KEY
+EOT
+#echo "AZURE_STORAGE_ACCOUNT="$AZURE_STORAGE_ACCOUNT >> /etc/default/azurefile-dockervolumedriver
+#echo "AZURE_STORAGE_ACCOUNT_KEY="$AZURE_STORAGE_ACCOUNT_KEY >> /etc/default/azurefile-dockervolumedriver
 
 mkdir -p /etc/systemd/systemd
 systemctl daemon-reload

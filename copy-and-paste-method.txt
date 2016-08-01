@@ -1,0 +1,3 @@
+wget https://raw.githubusercontent.com/gronka/azure-vd-installer/master/install.sh
+wget https://raw.githubusercontent.com/gronka/azure-vd-installer/master/azurefile-dockervolumedriver.service
+wget https://raw.githubusercontent.com/gronka/azure-vd-installer/master/azurefile-dockervolumedriver.default
