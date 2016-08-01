@@ -16,9 +16,6 @@ chmod +x /usr/bin/azurefile-dockervolumedriver
 cp azurefile-dockervolumedriver.default /etc/default/azurefile-dockervolumedriver
 cp azurefile-dockervolumedriver.service /etc/systemd/azurefile-dockervolumedriver.service
 
-echo "username=" >> /etc/default/azurefile-dockervolumedriver
-echo "password=" >> /etc/default/azurefile-dockervolumedriver
-
 echo "Storage account credentials are set in /etc/default/azurefile-dockervolumedriver."
 echo "You will have to add your username and password."
 
